@@ -1,0 +1,20 @@
+PODS:
+  - ReSwift (6.1.1)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - ReSwift (~> 6.1.1)
+  - SnapKit (~> 5.6.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ReSwift
+    - SnapKit
+
+SPEC CHECKSUMS:
+  ReSwift: 929afd2c897f0d33c76c730710a31bb2d2a66713
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 12c2dde612e29d79e29421dc25794f4ed254b84f
+
+COCOAPODS: 1.11.3

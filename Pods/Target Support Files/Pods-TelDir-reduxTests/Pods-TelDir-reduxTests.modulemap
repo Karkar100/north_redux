@@ -1,0 +1,6 @@
+framework module Pods_TelDir_reduxTests {
+  umbrella header "Pods-TelDir-reduxTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

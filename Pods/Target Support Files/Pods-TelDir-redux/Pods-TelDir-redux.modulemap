@@ -1,0 +1,6 @@
+framework module Pods_TelDir_redux {
+  umbrella header "Pods-TelDir-redux-umbrella.h"
+
+  export *
+  module * { export * }
+}
