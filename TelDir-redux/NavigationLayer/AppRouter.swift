@@ -10,7 +10,7 @@ import UIKit
 import ReSwift
 
 final class AppRouter {
-      let navigationController: UINavigationController
+      private let navigationController: UINavigationController
         
       init(window: UIWindow) {
         navigationController = UINavigationController()
@@ -22,7 +22,7 @@ final class AppRouter {
         }
     }
   
-    private func pushViewController(identifier: String, animated: Bool) {
+    func pushViewController(identifier: String = "OneContactVC", animated: Bool) {
         let viewController = UIViewController(nibName: identifier, bundle: nil)
         let newViewControllerType = type(of: viewController)
         if let currentVc = navigationController.topViewController {
@@ -34,21 +34,25 @@ final class AppRouter {
         navigationController.pushViewController(viewController, animated: animated)
     }
     
-    private func initialViewController(identifier: String, animated: Bool) {
-        let viewController = ContactListViewController()
-        navigationController.pushViewController(viewController, animated: animated)
+    func initialViewController(animated: Bool) {
+        DispatchQueue.main.async {
+            let viewController = ContactListViewController()
+            self.navigationController.viewControllers = [viewController]
+        }
     }
 }
 
 // MARK: - StoreSubscriber
 extension AppRouter: StoreSubscriber {
   func newState(state: RoutingState) {
-    let shouldAnimate = navigationController.topViewController != nil
-      switch state.navigationState {
-      case .initial:
-          initialViewController(identifier: state.navigationState.rawValue, animated: shouldAnimate)
-      case .oneContact:
-          pushViewController(identifier: state.navigationState.rawValue, animated: shouldAnimate)
+      DispatchQueue.main.async {
+          let shouldAnimate = self.navigationController.topViewController != nil
+            switch state.navigationState {
+            case .initial:
+                self.initialViewController(animated: shouldAnimate)
+            case .oneContact:
+                self.pushViewController(identifier: state.navigationState.rawValue, animated: shouldAnimate)
+            }
       }
-  }
+    }
 }

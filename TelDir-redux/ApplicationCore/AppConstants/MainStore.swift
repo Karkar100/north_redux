@@ -14,6 +14,7 @@ let mainStore = Store<AppState>(
     reducer: Reducers.appReducer,
     state: nil,
     middleware: [
-        middlewaresCreator.getNetworkMiddleware()
+        middlewaresCreator.getNetworkMiddleware(),
+        middlewaresCreator.getNavigationMiddleware()
     ]
 )

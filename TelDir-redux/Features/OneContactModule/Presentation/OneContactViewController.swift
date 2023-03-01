@@ -12,6 +12,27 @@ import ReSwift
 
 class OneContactViewController: UIViewController {
     
+    struct OneContactViewProps {
+        enum ContactHolder {
+            case isEmpty
+            case contact(ContactDetailedInfo)
+        }
+        let contactHolder: ContactHolder
+        let image: Image
+        let additionalScreen: AdditionalScreens
+        
+        init(state: OneContactState) {
+            switch state.contactInfoOptions {
+            case .initial:
+                self.contactHolder = .isEmpty
+            case .updated(let contactInfo):
+                self.contactHolder = .contact(contactInfo)
+            }
+            self.image = state.image
+            self.additionalScreen = state.additionalScreen
+        }
+    }
+    
     @IBOutlet private weak var contactImageView: UIImageView!
     @IBOutlet private weak var fullNameLabel: UILabel!
     @IBOutlet private weak var phoneLabel: UILabel!
@@ -27,6 +48,9 @@ class OneContactViewController: UIViewController {
     
     private func updateInfo(contactInfo: ContactDetailedInfo) {
         contactImageView.image = UIImage(systemName: "person.fill")
+        let imageTap = UITapGestureRecognizer(target: self, action: #selector(enlargeImage(_:)))
+        imageTap.numberOfTouchesRequired = 1
+        contactImageView.addGestureRecognizer(imageTap)
         fullNameLabel.text = contactInfo.fullname
         phoneLabel.text = "Телефон: +"+contactInfo.phone
         cellLabel.text = "Мобильный: +"+contactInfo.cell
@@ -63,13 +87,36 @@ class OneContactViewController: UIViewController {
         }
     }
     
-    func setRequestFailureView() {
+    private func setRequestFailureView() {
         let alert = UIAlertController(title: "Не удалось загрузить изображение", message:  "Пожалуйста, проверьте подключение.", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Повторить попытку", style: UIAlertAction.Style.default){_ in
             let action = HTTPRequest(resource: self.imageURL,method: .get, dataType: .imageData(.large))
             mainStore.dispatch(action)
         })
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func render(props: OneContactViewProps) {
+        DispatchQueue.main.async {
+            switch props.contactHolder {
+            case .isEmpty: break
+            case .contact(let contactInfo):
+                self.updateInfo(contactInfo: contactInfo)
+            }
+            props.image.state == .notDownloaded ? self.imageLoadingActivityIndicator.startAnimating() : self.imageLoadingActivityIndicator.stopAnimating()
+            switch props.image.state {
+            case .notDownloaded: break
+            case .downloaded(let data):
+                self.contactImageView.image = UIImage(data: data)
+            case .failed:
+                self.setRequestFailureView()
+            }
+//            switch props.additionalScreen {
+//            case .none: break
+//            case .largePhoto: break
+//            case .sms: break
+//            }
+        }
     }
 }
 
@@ -91,27 +138,28 @@ extension OneContactViewController: StoreSubscriber {
     }
     
     func newState(state: OneContactState) {
-        switch state.contactInfoOptions {
-        case .initial:
-            break
-        case .updated(let detailedInfo):
-            updateInfo(contactInfo: detailedInfo)
-        }
-        switch state.image.state {
-        case .notDownloaded:
-            imageLoadingActivityIndicator.startAnimating()
-        case .downloaded(let data):
-            imageLoadingActivityIndicator.stopAnimating()
-            guard let image = UIImage(data: data) else { return }
-            self.contactImageView.image = image
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.enlargeImage(_:)))
-            tapGestureRecognizer.numberOfTouchesRequired = 1
-            self.contactImageView.isUserInteractionEnabled = true
-            self.contactImageView.addGestureRecognizer(tapGestureRecognizer)
-        case .failed:
-            imageLoadingActivityIndicator.stopAnimating()
-            setRequestFailureView()
-        }
-        
+        let props = OneContactViewProps(state: state)
+        render(props: props)
+//        switch state.contactInfoOptions {
+//        case .initial:
+//            break
+//        case .updated(let detailedInfo):
+//            updateInfo(contactInfo: detailedInfo)
+//        }
+//        switch state.image.state {
+//        case .notDownloaded:
+//            imageLoadingActivityIndicator.startAnimating()
+//        case .downloaded(let data):
+//            imageLoadingActivityIndicator.stopAnimating()
+//            guard let image = UIImage(data: data) else { return }
+//            self.contactImageView.image = image
+//            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.enlargeImage(_:)))
+//            tapGestureRecognizer.numberOfTouchesRequired = 1
+//            self.contactImageView.isUserInteractionEnabled = true
+//            self.contactImageView.addGestureRecognizer(tapGestureRecognizer)
+//        case .failed:
+//            imageLoadingActivityIndicator.stopAnimating()
+//            setRequestFailureView()
+//        }
     }
 }

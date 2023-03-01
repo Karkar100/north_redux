@@ -9,7 +9,34 @@ import UIKit
 import ReSwift
 
 class ContactListViewController: UIViewController {
-
+    
+    struct ContactListViewProps {
+        enum ContactListLoadResult {
+            case success([ContactPresentationModel])
+            case failure(Error)
+            case notFinished
+        }
+        let isLoading: Bool
+        let loadingResult: ContactListLoadResult
+        
+        init(state: ContactListState) {
+            switch state.requestState {
+            case .initial:
+                self.loadingResult = .notFinished
+                self.isLoading = false
+            case .isLoading:
+                self.isLoading = true
+                self.loadingResult = .notFinished
+            case .updated(let contacts):
+                self.isLoading = false
+                self.loadingResult = .success(contacts)
+            case .failure(let error):
+                self.isLoading = false
+                self.loadingResult = .failure(error)
+            }
+        }
+    }
+    
     private let tableView = UITableView(frame: .zero)
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     private let searchController = UISearchController(searchResultsController: nil)
@@ -42,6 +69,26 @@ class ContactListViewController: UIViewController {
         })
         self.present(alert, animated: true, completion: nil)
     }
+    
+    private func render(props: ContactListViewProps) {
+        props.isLoading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+        switch props.loadingResult {
+        case .success(let contacts):
+            if contacts.count == 0 {
+                nothingFoundLabel.isHidden = false
+                tableView.isHidden = true
+            } else {
+                nothingFoundLabel.isHidden = true
+                tableView.isHidden = false
+                navigationController?.navigationBar.isHidden = false
+                updateDataSource(contacts)
+            }
+        case .failure(let error):
+            setRequestFailureView(error: error)
+        case .notFinished:
+            break
+        }
+    }
 }
 
 extension ContactListViewController: StoreSubscriber {
@@ -55,7 +102,7 @@ extension ContactListViewController: StoreSubscriber {
                 $0.contactListState
             }
         }
-        mainStore.dispatch(RoutingAction(destination: .initial))
+        mainStore.dispatch(RoutingAction(navigationState: .initial))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -64,25 +111,9 @@ extension ContactListViewController: StoreSubscriber {
     }
 
     func newState(state: ContactListState) {
-        switch state.requestState {
-        case .initial:
-            break
-        case .isLoading:
-            activityIndicator.startAnimating()
-        case .updated(let list):
-            activityIndicator.stopAnimating()
-            if list.count == 0 {
-                nothingFoundLabel.isHidden = false
-                tableView.isHidden = true
-            } else {
-                nothingFoundLabel.isHidden = true
-                tableView.isHidden = false
-                navigationController?.navigationBar.isHidden = false
-                updateDataSource(list)
-            }
-        case .failure(let error):
-            activityIndicator.stopAnimating()
-            setRequestFailureView(error: error)
+        let props = ContactListViewProps(state: state)
+        DispatchQueue.main.async {
+            self.render(props: props)
         }
     }
 }
@@ -163,6 +194,10 @@ extension ContactListViewController: UITableViewDelegate {
         if let indexPath = tableView.indexPathForSelectedRow {
             let contactPresentationModel = dataSource.snapshot().itemIdentifiers[indexPath.row]
             let id = contactPresentationModel.id
+            let routingAction = RoutingAction(navigationState: .oneContact)
+            mainStore.dispatch(routingAction)
+            let action = UpdateOneContactAction(id: id)
+            mainStore.dispatch(action)
 //            presenter?.openContact(id: id)
         }
     }
@@ -173,3 +208,4 @@ extension ContactListViewController: UISearchResultsUpdating {
         (searchController.searchBar.text?.isEmpty ?? true) ? mainStore.dispatch(DeactivateFilteringAction()) : mainStore.dispatch(ContactListFilterAction(filterString: searchController.searchBar.text!))
     }
 }
+

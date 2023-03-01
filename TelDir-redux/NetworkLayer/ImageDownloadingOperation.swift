@@ -112,6 +112,6 @@ class ImageDownloadingOperation: AsyncOperation {
 enum ImageDownloadingResult {
     case isCancelled
     case success(Data?)
-    case failure(HTTPError)
+    case failure(Error)
 }
 

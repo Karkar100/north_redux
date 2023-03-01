@@ -16,7 +16,7 @@ struct Image {
     }
 }
 
-enum ImageState {
+enum ImageState: Equatable {
     case notDownloaded
     case downloaded(Data)
     case failed

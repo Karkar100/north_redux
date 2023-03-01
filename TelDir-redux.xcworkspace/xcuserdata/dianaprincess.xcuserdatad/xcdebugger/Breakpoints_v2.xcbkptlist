@@ -3,4 +3,127 @@
    uuid = "BFCEF609-CE77-4A44-A79D-132E92B18DBD"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "E9347EFE-3CF9-48C8-A608-64E1820069B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1303B975-4A01-4605-AEDC-21F5EB1F90CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TelDir-redux/NavigationLayer/AppRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "initialViewController(animated:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68446EAD-8556-4D21-A411-8603C0D5EA4E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TelDir-redux/Features/ContactListModule/Presentation/ContactListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62D0C250-D5FA-4325-8A4A-9FD435324A82"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TelDir-redux/ApplicationCore/AppConstants/MiddlewaresCreator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "getNavigationMiddleware()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "62D0C250-D5FA-4325-8A4A-9FD435324A82 - 8c65a6ccfaac1b14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (ReSwift.Action) -&gt; () in closure #1 ((ReSwift.Action) -&gt; ()) -&gt; (ReSwift.Action) -&gt; () in closure #1 ((ReSwift.Action) -&gt; (), () -&gt; Swift.Optional&lt;TelDir_redux.AppState&gt;) -&gt; ((ReSwift.Action) -&gt; ()) -&gt; (ReSwift.Action) -&gt; () in TelDir_redux.MiddlewaresCreator.getNavigationMiddleware() -&gt; ((ReSwift.Action) -&gt; (), () -&gt; Swift.Optional&lt;TelDir_redux.AppState&gt;) -&gt; ((ReSwift.Action) -&gt; ()) -&gt; (ReSwift.Action) -&gt; ()"
+                  moduleName = "TelDir-redux"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dianaprincess/Desktop/WORK!!!!/phonebook/TelDir-redux/TelDir-redux/ApplicationCore/AppConstants/MiddlewaresCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "62D0C250-D5FA-4325-8A4A-9FD435324A82 - d31857364d18a97f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (ReSwift.Action) -&gt; () in closure #1 (ReSwift.Action) -&gt; () in closure #1 ((ReSwift.Action) -&gt; ()) -&gt; (ReSwift.Action) -&gt; () in closure #1 ((ReSwift.Action) -&gt; (), () -&gt; Swift.Optional&lt;TelDir_redux.AppState&gt;) -&gt; ((ReSwift.Action) -&gt; ()) -&gt; (ReSwift.Action) -&gt; () in TelDir_redux.MiddlewaresCreator.getNavigationMiddleware() -&gt; ((ReSwift.Action) -&gt; (), () -&gt; Swift.Optional&lt;TelDir_redux.AppState&gt;) -&gt; ((ReSwift.Action) -&gt; ()) -&gt; (ReSwift.Action) -&gt; ()"
+                  moduleName = "TelDir-redux"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dianaprincess/Desktop/WORK!!!!/phonebook/TelDir-redux/TelDir-redux/ApplicationCore/AppConstants/MiddlewaresCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "449DE80C-8C41-44BA-A4D7-6355841102AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TelDir-redux/NavigationLayer/RoutingReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "routingReducer(action:state:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BBD74CC3-9B50-4748-96E2-8D44807FCF57"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TelDir-redux/NavigationLayer/AppRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "newState(state:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

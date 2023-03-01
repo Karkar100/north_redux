@@ -8,7 +8,7 @@
 import Foundation
 import ReSwift
 
-struct RoutingState: StateType {
+struct RoutingState {
     var navigationState: RoutingDestination
     
     init(navigationState: RoutingDestination = .initial) {
@@ -17,6 +17,6 @@ struct RoutingState: StateType {
 }
 
 enum RoutingDestination: String {
-    case initial = ""
+    case initial = "initial"
     case oneContact = "OneContactVC"
 }

@@ -42,6 +42,18 @@ extension MiddlewaresCreator {
         }
     }
     
+    func getNavigationMiddleware() -> Middleware<AppState> {
+        return { dispatch, getState in
+            return { next in
+                return { action in
+                    next(action)
+                    guard let navigationChange = action as? RoutingActionProtocol else { return }
+                    navigationChange.navigate(navigationChange.navigationState).forEach{ mainStore.dispatch($0) }
+                }
+            }
+        }
+    }
+    
     private func processContactListRequest(request: HTTPRequestProtocol, dispatcher: @escaping DispatchFunction) {
         guard let url = URL(string: "\(request.resource)") else { return }
         var urlRequest = URLRequest(url: url)

@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		2143B8523700371BD75BB8B8 /* Pods_TelDir_redux_TelDir_reduxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3EA9EA1CF504CE90AF7546 /* Pods_TelDir_redux_TelDir_reduxUITests.framework */; };
 		A2206C113F49B8D020F6D7C2 /* Pods_TelDir_reduxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86BD3E54BDF3CF47A519DE3 /* Pods_TelDir_reduxTests.framework */; };
-		EB444FDB29A4C3D200293CD8 /* DisplayErrorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FDA29A4C3D200293CD8 /* DisplayErrorAction.swift */; };
-		EB444FDD29A4C52900293CD8 /* ContactListTransformAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FDC29A4C52900293CD8 /* ContactListTransformAction.swift */; };
-		EB444FDF29A4C83B00293CD8 /* ContactListFilterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FDE29A4C83B00293CD8 /* ContactListFilterAction.swift */; };
-		EB444FE129A509E400293CD8 /* DeactivateFilteringAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FE029A509E400293CD8 /* DeactivateFilteringAction.swift */; };
-		EB444FE329A50C6000293CD8 /* UpdateThumbnailAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FE229A50C6000293CD8 /* UpdateThumbnailAction.swift */; };
-		EB444FE529A514A700293CD8 /* UpdateImageAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FE429A514A700293CD8 /* UpdateImageAction.swift */; };
 		EB444FE729A5211E00293CD8 /* ContactListReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FE629A5211E00293CD8 /* ContactListReducer.swift */; };
 		EB444FEB29A522A900293CD8 /* CustomModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FEA29A522A900293CD8 /* CustomModalViewController.swift */; };
 		EB444FEF29A52CEB00293CD8 /* RoutingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FEE29A52CEB00293CD8 /* RoutingState.swift */; };
@@ -24,9 +18,9 @@
 		EB444FF829A5383100293CD8 /* OneContactState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FF729A5383100293CD8 /* OneContactState.swift */; };
 		EB444FFA29A538D900293CD8 /* ContactDetailedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FF929A538D900293CD8 /* ContactDetailedInfo.swift */; };
 		EB444FFC29A5396100293CD8 /* OneContactReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB444FFB29A5396100293CD8 /* OneContactReducer.swift */; };
-		EB44500029A560A600293CD8 /* OneContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB444FFF29A560A600293CD8 /* OneContactVC.xib */; };
 		EB44500229A5610A00293CD8 /* OneContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44500129A5610A00293CD8 /* OneContactViewController.swift */; };
-		EB44500429A6048400293CD8 /* UpdateOneContactAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44500329A6048400293CD8 /* UpdateOneContactAction.swift */; };
+		EB44500629A62B2700293CD8 /* ContactListActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44500529A62B2700293CD8 /* ContactListActions.swift */; };
+		EB44500829AC7C2C00293CD8 /* OneContactActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB44500729AC7C2C00293CD8 /* OneContactActions.swift */; };
 		EBDD42A4299BAB7500F22FF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42A3299BAB7500F22FF5 /* AppDelegate.swift */; };
 		EBDD42A6299BAB7500F22FF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42A5299BAB7500F22FF5 /* SceneDelegate.swift */; };
 		EBDD42A8299BAB7500F22FF5 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42A7299BAB7500F22FF5 /* ContactListViewController.swift */; };
@@ -37,7 +31,7 @@
 		EBDD42C5299BAB7600F22FF5 /* TelDir_reduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42C4299BAB7600F22FF5 /* TelDir_reduxUITests.swift */; };
 		EBDD42C7299BAB7600F22FF5 /* TelDir_reduxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42C6299BAB7600F22FF5 /* TelDir_reduxUITestsLaunchTests.swift */; };
 		EBDD42D4299BC7CB00F22FF5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42D3299BC7CB00F22FF5 /* AppState.swift */; };
-		EBDD42D8299BD48400F22FF5 /* GlobalReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42D7299BD48400F22FF5 /* GlobalReducer.swift */; };
+		EBDD42D8299BD48400F22FF5 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42D7299BD48400F22FF5 /* AppReducer.swift */; };
 		EBDD42DC299E8A1600F22FF5 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42DB299E8A1600F22FF5 /* ContactTableViewCell.swift */; };
 		EBDD42DE299E8F1500F22FF5 /* ContactsNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42DD299E8F1500F22FF5 /* ContactsNetworkResponse.swift */; };
 		EBDD42E0299E909300F22FF5 /* HTTPRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD42DF299E909300F22FF5 /* HTTPRequestProtocol.swift */; };
@@ -54,6 +48,9 @@
 		EBDD430A29A10FC900F22FF5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD430929A10FC900F22FF5 /* Image.swift */; };
 		EBDD430C29A3A7DB00F22FF5 /* MiddlewaresCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD430B29A3A7DB00F22FF5 /* MiddlewaresCreator.swift */; };
 		EBDD431029A4A37300F22FF5 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDD430F29A4A37300F22FF5 /* HTTPError.swift */; };
+		EBEAD49629AE4896000CDE03 /* OneContactVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBEAD49529AE4896000CDE03 /* OneContactVC.xib */; };
+		EBEAD49829AE97E4000CDE03 /* AppRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEAD49729AE97E4000CDE03 /* AppRouterProtocol.swift */; };
+		EBEAD49A29AE9BF7000CDE03 /* RoutingActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEAD49929AE9BF7000CDE03 /* RoutingActionProtocol.swift */; };
 		F4EC4751A4E220B57D0DF282 /* Pods_TelDir_redux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F439FE092F1F1AC6B46A9211 /* Pods_TelDir_redux.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,12 +78,6 @@
 		A86BD3E54BDF3CF47A519DE3 /* Pods_TelDir_reduxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelDir_reduxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D152962103148B64366F4554 /* Pods-TelDir-reduxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelDir-reduxTests.release.xcconfig"; path = "Target Support Files/Pods-TelDir-reduxTests/Pods-TelDir-reduxTests.release.xcconfig"; sourceTree = "<group>"; };
 		DD3EA9EA1CF504CE90AF7546 /* Pods_TelDir_redux_TelDir_reduxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelDir_redux_TelDir_reduxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB444FDA29A4C3D200293CD8 /* DisplayErrorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayErrorAction.swift; sourceTree = "<group>"; };
-		EB444FDC29A4C52900293CD8 /* ContactListTransformAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTransformAction.swift; sourceTree = "<group>"; };
-		EB444FDE29A4C83B00293CD8 /* ContactListFilterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListFilterAction.swift; sourceTree = "<group>"; };
-		EB444FE029A509E400293CD8 /* DeactivateFilteringAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateFilteringAction.swift; sourceTree = "<group>"; };
-		EB444FE229A50C6000293CD8 /* UpdateThumbnailAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateThumbnailAction.swift; sourceTree = "<group>"; };
-		EB444FE429A514A700293CD8 /* UpdateImageAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateImageAction.swift; sourceTree = "<group>"; };
 		EB444FE629A5211E00293CD8 /* ContactListReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListReducer.swift; sourceTree = "<group>"; };
 		EB444FEA29A522A900293CD8 /* CustomModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModalViewController.swift; sourceTree = "<group>"; };
 		EB444FEE29A52CEB00293CD8 /* RoutingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
@@ -96,9 +87,9 @@
 		EB444FF729A5383100293CD8 /* OneContactState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactState.swift; sourceTree = "<group>"; };
 		EB444FF929A538D900293CD8 /* ContactDetailedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailedInfo.swift; sourceTree = "<group>"; };
 		EB444FFB29A5396100293CD8 /* OneContactReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactReducer.swift; sourceTree = "<group>"; };
-		EB444FFF29A560A600293CD8 /* OneContactVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneContactVC.xib; sourceTree = "<group>"; };
 		EB44500129A5610A00293CD8 /* OneContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactViewController.swift; sourceTree = "<group>"; };
-		EB44500329A6048400293CD8 /* UpdateOneContactAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateOneContactAction.swift; sourceTree = "<group>"; };
+		EB44500529A62B2700293CD8 /* ContactListActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListActions.swift; sourceTree = "<group>"; };
+		EB44500729AC7C2C00293CD8 /* OneContactActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneContactActions.swift; sourceTree = "<group>"; };
 		EBDD42A0299BAB7500F22FF5 /* TelDir-redux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TelDir-redux.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBDD42A3299BAB7500F22FF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBDD42A5299BAB7500F22FF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +104,7 @@
 		EBDD42C4299BAB7600F22FF5 /* TelDir_reduxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelDir_reduxUITests.swift; sourceTree = "<group>"; };
 		EBDD42C6299BAB7600F22FF5 /* TelDir_reduxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelDir_reduxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EBDD42D3299BC7CB00F22FF5 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		EBDD42D7299BD48400F22FF5 /* GlobalReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalReducer.swift; sourceTree = "<group>"; };
+		EBDD42D7299BD48400F22FF5 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		EBDD42DB299E8A1600F22FF5 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		EBDD42DD299E8F1500F22FF5 /* ContactsNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsNetworkResponse.swift; sourceTree = "<group>"; };
 		EBDD42DF299E909300F22FF5 /* HTTPRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestProtocol.swift; sourceTree = "<group>"; };
@@ -130,6 +121,9 @@
 		EBDD430929A10FC900F22FF5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		EBDD430B29A3A7DB00F22FF5 /* MiddlewaresCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewaresCreator.swift; sourceTree = "<group>"; };
 		EBDD430F29A4A37300F22FF5 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		EBEAD49529AE4896000CDE03 /* OneContactVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneContactVC.xib; sourceTree = "<group>"; };
+		EBEAD49729AE97E4000CDE03 /* AppRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterProtocol.swift; sourceTree = "<group>"; };
+		EBEAD49929AE9BF7000CDE03 /* RoutingActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingActionProtocol.swift; sourceTree = "<group>"; };
 		F3EBAB4E1791E5C745F95F1E /* Pods-TelDir-redux.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelDir-redux.release.xcconfig"; path = "Target Support Files/Pods-TelDir-redux/Pods-TelDir-redux.release.xcconfig"; sourceTree = "<group>"; };
 		F439FE092F1F1AC6B46A9211 /* Pods_TelDir_redux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelDir_redux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F2EEAA9911918F75C918BE /* Pods-TelDir-redux-TelDir-reduxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelDir-redux-TelDir-reduxUITests.release.xcconfig"; path = "Target Support Files/Pods-TelDir-redux-TelDir-reduxUITests/Pods-TelDir-redux-TelDir-reduxUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +194,7 @@
 		EB444FE929A5227400293CD8 /* ApplicationCore */ = {
 			isa = PBXGroup;
 			children = (
+				EB44500B29AE182C00293CD8 /* AppConstants */,
 				EB444FEC29A522D300293CD8 /* UI elements */,
 				EB444FE829A5224F00293CD8 /* Helpers&Extensions */,
 			);
@@ -217,6 +212,7 @@
 		EB444FED29A5231B00293CD8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EBDD42E7299EC96900F22FF5 /* ContactListState.swift */,
 				EBDD42EB299ECB4900F22FF5 /* ContactPresentationModel.swift */,
 			);
 			path = Models;
@@ -226,7 +222,11 @@
 			isa = PBXGroup;
 			children = (
 				EB444FEE29A52CEB00293CD8 /* RoutingState.swift */,
+				EB444FF529A5367600293CD8 /* RoutingAction.swift */,
+				EBEAD49929AE9BF7000CDE03 /* RoutingActionProtocol.swift */,
+				EB444FF129A52E8000293CD8 /* RoutingReducer.swift */,
 				EB444FF329A52F5700293CD8 /* AppRouter.swift */,
+				EBEAD49729AE97E4000CDE03 /* AppRouterProtocol.swift */,
 			);
 			path = NavigationLayer;
 			sourceTree = "<group>";
@@ -234,12 +234,32 @@
 		EB444FFE29A5606400293CD8 /* OneContactModule */ = {
 			isa = PBXGroup;
 			children = (
-				EB444FF929A538D900293CD8 /* ContactDetailedInfo.swift */,
-				EB444FF729A5383100293CD8 /* OneContactState.swift */,
-				EB44500129A5610A00293CD8 /* OneContactViewController.swift */,
-				EB444FFF29A560A600293CD8 /* OneContactVC.xib */,
+				EB44500729AC7C2C00293CD8 /* OneContactActions.swift */,
+				EB444FFB29A5396100293CD8 /* OneContactReducer.swift */,
+				EBEAD49429AE1912000CDE03 /* Models */,
+				EB44500C29AE184A00293CD8 /* Presentation */,
 			);
 			path = OneContactModule;
+			sourceTree = "<group>";
+		};
+		EB44500B29AE182C00293CD8 /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				EBDD42D3299BC7CB00F22FF5 /* AppState.swift */,
+				EBDD430B29A3A7DB00F22FF5 /* MiddlewaresCreator.swift */,
+				EBDD42D7299BD48400F22FF5 /* AppReducer.swift */,
+				EBDD42E5299E9AC100F22FF5 /* MainStore.swift */,
+			);
+			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		EB44500C29AE184A00293CD8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EB44500129A5610A00293CD8 /* OneContactViewController.swift */,
+				EBEAD49529AE4896000CDE03 /* OneContactVC.xib */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		EBDD4297299BAB7500F22FF5 = {
@@ -270,22 +290,7 @@
 				EBDD42A3299BAB7500F22FF5 /* AppDelegate.swift */,
 				EBDD42A5299BAB7500F22FF5 /* SceneDelegate.swift */,
 				EB444FE929A5227400293CD8 /* ApplicationCore */,
-				EBDD42D3299BC7CB00F22FF5 /* AppState.swift */,
-				EBDD42E5299E9AC100F22FF5 /* MainStore.swift */,
-				EBDD42D7299BD48400F22FF5 /* GlobalReducer.swift */,
-				EB444FE629A5211E00293CD8 /* ContactListReducer.swift */,
-				EB444FF129A52E8000293CD8 /* RoutingReducer.swift */,
-				EB444FFB29A5396100293CD8 /* OneContactReducer.swift */,
-				EB444FF529A5367600293CD8 /* RoutingAction.swift */,
 				EBDD430929A10FC900F22FF5 /* Image.swift */,
-				EB444FDC29A4C52900293CD8 /* ContactListTransformAction.swift */,
-				EB444FDE29A4C83B00293CD8 /* ContactListFilterAction.swift */,
-				EB444FE029A509E400293CD8 /* DeactivateFilteringAction.swift */,
-				EB444FE229A50C6000293CD8 /* UpdateThumbnailAction.swift */,
-				EB44500329A6048400293CD8 /* UpdateOneContactAction.swift */,
-				EB444FE429A514A700293CD8 /* UpdateImageAction.swift */,
-				EB444FDA29A4C3D200293CD8 /* DisplayErrorAction.swift */,
-				EBDD42ED299ECB6700F22FF5 /* ContactItem.swift */,
 				EBDD42F0299F4A1900F22FF5 /* Features */,
 				EB444FF029A52DF100293CD8 /* NavigationLayer */,
 				EBDD42EF299F3F0D00F22FF5 /* NetworkLayer */,
@@ -318,9 +323,9 @@
 			isa = PBXGroup;
 			children = (
 				EBDD42DD299E8F1500F22FF5 /* ContactsNetworkResponse.swift */,
-				EBDD430B29A3A7DB00F22FF5 /* MiddlewaresCreator.swift */,
 				EBDD42DF299E909300F22FF5 /* HTTPRequestProtocol.swift */,
 				EBDD42E1299E91BD00F22FF5 /* HTTPRequest.swift */,
+				EBDD42ED299ECB6700F22FF5 /* ContactItem.swift */,
 				EBDD42F929A0E97B00F22FF5 /* OperationStack.swift */,
 				EBDD430329A10C1300F22FF5 /* ImageDownloadingOperation.swift */,
 			);
@@ -339,7 +344,8 @@
 		EBDD42F1299F4A2100F22FF5 /* ContactListModule */ = {
 			isa = PBXGroup;
 			children = (
-				EBDD42E7299EC96900F22FF5 /* ContactListState.swift */,
+				EB44500529A62B2700293CD8 /* ContactListActions.swift */,
+				EB444FE629A5211E00293CD8 /* ContactListReducer.swift */,
 				EB444FED29A5231B00293CD8 /* Models */,
 				EBDD42F2299F4A3500F22FF5 /* Presentation */,
 			);
@@ -353,6 +359,15 @@
 				EBDD42DB299E8A1600F22FF5 /* ContactTableViewCell.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EBEAD49429AE1912000CDE03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB444FF729A5383100293CD8 /* OneContactState.swift */,
+				EB444FF929A538D900293CD8 /* ContactDetailedInfo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,7 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB44500029A560A600293CD8 /* OneContactVC.xib in Resources */,
+				EBEAD49629AE4896000CDE03 /* OneContactVC.xib in Resources */,
 				EBDD42B0299BAB7600F22FF5 /* LaunchScreen.storyboard in Resources */,
 				EBDD42AD299BAB7600F22FF5 /* Assets.xcassets in Resources */,
 				EBDD42AB299BAB7500F22FF5 /* Main.storyboard in Resources */,
@@ -596,17 +611,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBDD42DE299E8F1500F22FF5 /* ContactsNetworkResponse.swift in Sources */,
-				EB444FDB29A4C3D200293CD8 /* DisplayErrorAction.swift in Sources */,
 				EB444FEB29A522A900293CD8 /* CustomModalViewController.swift in Sources */,
 				EB444FF829A5383100293CD8 /* OneContactState.swift in Sources */,
 				EB444FF229A52E8000293CD8 /* RoutingReducer.swift in Sources */,
 				EB444FFA29A538D900293CD8 /* ContactDetailedInfo.swift in Sources */,
-				EB44500429A6048400293CD8 /* UpdateOneContactAction.swift in Sources */,
 				EBDD430C29A3A7DB00F22FF5 /* MiddlewaresCreator.swift in Sources */,
-				EB444FDD29A4C52900293CD8 /* ContactListTransformAction.swift in Sources */,
 				EBDD42EC299ECB4900F22FF5 /* ContactPresentationModel.swift in Sources */,
+				EB44500829AC7C2C00293CD8 /* OneContactActions.swift in Sources */,
 				EBDD42A8299BAB7500F22FF5 /* ContactListViewController.swift in Sources */,
 				EBDD42A4299BAB7500F22FF5 /* AppDelegate.swift in Sources */,
+				EBEAD49A29AE9BF7000CDE03 /* RoutingActionProtocol.swift in Sources */,
 				EBDD42A6299BAB7500F22FF5 /* SceneDelegate.swift in Sources */,
 				EBDD430A29A10FC900F22FF5 /* Image.swift in Sources */,
 				EB444FF629A5367600293CD8 /* RoutingAction.swift in Sources */,
@@ -615,8 +629,8 @@
 				EBDD42FC29A0ED7100F22FF5 /* ImageDataCacheTypeProtocol.swift in Sources */,
 				EBDD42D4299BC7CB00F22FF5 /* AppState.swift in Sources */,
 				EBDD430429A10C1300F22FF5 /* ImageDownloadingOperation.swift in Sources */,
-				EB444FE129A509E400293CD8 /* DeactivateFilteringAction.swift in Sources */,
 				EBDD42DC299E8A1600F22FF5 /* ContactTableViewCell.swift in Sources */,
+				EB44500629A62B2700293CD8 /* ContactListActions.swift in Sources */,
 				EBDD42EE299ECB6700F22FF5 /* ContactItem.swift in Sources */,
 				EBDD42E0299E909300F22FF5 /* HTTPRequestProtocol.swift in Sources */,
 				EB444FEF29A52CEB00293CD8 /* RoutingState.swift in Sources */,
@@ -625,14 +639,12 @@
 				EB444FFC29A5396100293CD8 /* OneContactReducer.swift in Sources */,
 				EBDD42FA29A0E97B00F22FF5 /* OperationStack.swift in Sources */,
 				EBDD42E6299E9AC100F22FF5 /* MainStore.swift in Sources */,
+				EBEAD49829AE97E4000CDE03 /* AppRouterProtocol.swift in Sources */,
 				EBDD42EA299ECAAE00F22FF5 /* ContactListDataStorage.swift in Sources */,
 				EB44500229A5610A00293CD8 /* OneContactViewController.swift in Sources */,
-				EB444FE529A514A700293CD8 /* UpdateImageAction.swift in Sources */,
-				EB444FDF29A4C83B00293CD8 /* ContactListFilterAction.swift in Sources */,
-				EB444FE329A50C6000293CD8 /* UpdateThumbnailAction.swift in Sources */,
 				EBDD431029A4A37300F22FF5 /* HTTPError.swift in Sources */,
 				EBDD42FE29A0ED9800F22FF5 /* ImageDataCache.swift in Sources */,
-				EBDD42D8299BD48400F22FF5 /* GlobalReducer.swift in Sources */,
+				EBDD42D8299BD48400F22FF5 /* AppReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

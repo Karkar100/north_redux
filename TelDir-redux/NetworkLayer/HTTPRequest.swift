@@ -23,7 +23,7 @@ class HTTPRequest: Action {
 // MARK: HTTPRequest protocol implementation
 extension HTTPRequest: HTTPRequestProtocol {
     func receivedContacts(contacts: [ContactItem]) -> [Action] {
-        return [ContactListTransformAction(source: contacts)]
+        return [ContactListLoadingSuccess(contacts: contacts)]
     }
     
     func receivedImageData(result: ImageDownloadingResult, _ id: String? = nil) -> [Action] {
@@ -35,6 +35,11 @@ extension HTTPRequest: HTTPRequestProtocol {
     }
     
     func onFailure(response: Error) -> [Action] {
-        return [DisplayErrorAction(error: response)]
+        switch dataType {
+        case .contacts:
+            return [ContactListLoadingFailure(error: response)]
+        case .imageData(_):
+            return [UpdateImageAction(result: .failure(response))]
+        }
     }
 }
